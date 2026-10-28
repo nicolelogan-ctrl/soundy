@@ -1,0 +1,28 @@
+package com.nicoleloganctrl.soundy;
+
+import com.sedmelluq.discord.lavaplayer.tools.JsonBrowser;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PlaylistParser {
+
+    private final TrackParser trackParser = new TrackParser();
+
+    public PlaylistData parse(JsonBrowser playlist) {
+        long id = playlist.get("id").asLong(0);
+        String title = playlist.get("title").text();
+        String permalinkUrl = playlist.get("permalink_url").text();
+        String username = playlist.get("user").get("username").text();
+
+        List<TrackData> tracks = new ArrayList<>();
+        for (JsonBrowser track : playlist.get("tracks").values()) {
+            if (!track.get("title").isNull() && !track.get("user").isNull()) {
+                tracks.add(trackParser.parse(track));
+            }
+        }
+
+        return new PlaylistData(id, title, permalinkUrl,
+                username != null ? username : "Unknown", tracks);
+    }
+}
