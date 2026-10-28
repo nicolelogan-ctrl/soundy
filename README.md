@@ -26,7 +26,7 @@ Then declare it in your `application.yml`:
 ```yaml
 lavalink:
   plugins:
-    - dependency: "com.nicolelogan-ctrl.soundy:plugin:1.0.0"
+    - dependency: "com.nicolelogan-ctrl.soundy:plugin:1.0.4"
       repository: "https://maven.lavalink.dev/releases"
 ```
 
