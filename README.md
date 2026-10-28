@@ -26,7 +26,7 @@ Then declare it in your `application.yml`:
 ```yaml
 lavalink:
   plugins:
-    - dependency: "com.waris4ly.soundy:plugin:1.0.0"
+    - dependency: "com.nicolelogan-ctrl.soundy:plugin:1.0.0"
       repository: "https://maven.lavalink.dev/releases"
 ```
 
@@ -50,7 +50,7 @@ repositories {
 }
 
 dependencies {
-    implementation("com.waris4ly.soundy:common:1.0.0")
+    implementation("com.nicolelogan-ctrl.soundy:common:1.0.0")
 }
 ```
 
