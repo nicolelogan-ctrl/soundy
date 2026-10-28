@@ -18,7 +18,7 @@ Drop the jar into your Lavalink `plugins/` folder.
 ```
 lavalink/
 └── plugins/
-    └── soundy-plugin-1.0.0.jar
+    └── soundy-plugin-1.0.4.jar
 ```
 
 Then declare it in your `application.yml`:
